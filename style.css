@@ -1,0 +1,241 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background: url(hh.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .box {
+    height: 86vh;
+    width: 75%;
+    padding: 0 20px;
+    background-color: rgba(253, 253, 253, 0.1);
+    z-index: 10;
+    border: 2px solid rgba(17, 16, 16, 0.7);
+    border-radius: 20px;
+    display: flex;
+    backdrop-filter: blur(15px);
+    box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.15);
+}
+
+.container nav {
+    height: 7%;
+    width: 90%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px auto;
+    padding: 20px;
+}
+
+.container .logo {
+    font-size: 32px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000;
+    margin-left: 30px;
+}
+
+.container .logo::first-letter {
+    color: #f5faf6;
+    font-size: 35px;
+}
+
+.container nav ul li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.container nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #000;
+    transition: 0.3s;
+}
+
+.container nav ul li a:hover {
+    color: #f1f5f2;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 8%;
+    padding-left: 80px;
+}
+
+.content .section-1 {
+    position: relative;
+    width: 40%;
+}
+
+.content .section-1 h1 {
+    margin-bottom: 33px;
+    font-size: 44px;
+    font-weight: 700;
+    color: #000;
+}
+
+.content .section-1 h3 {
+    font-size: 44px;
+    color: #f7faf7;
+    margin-bottom: 10px;
+}
+
+.content .section-1 p {
+    font-size: 15px;
+    color: #505052;
+    margin-bottom: 50px;
+}
+
+.content .btn {
+    padding: 15px 20px;
+    border-radius: 5px;
+    background-color: #f7f6f4;
+    border: 3px solid #a2a4a5;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s;
+    color: #929394;
+}
+
+.content .btn:hover {
+    background-color: #60696b;
+    color: #f3f2ed;
+    border-radius: 5px;
+    border: 3px solid #f9fafa;
+}
+
+.content .section-2 {
+    width: 67%;
+    position: relative;
+}
+
+.content .section-2 img {
+    width: 76%;
+}
+
+.content .social {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: absolute;
+    left: 10px;
+    top: 36%;
+}
+
+.content .social a i {
+    font-size: 25px;
+    color: #fffffd;
+    transition: 0.3s;
+}
+
+.content .social i:hover {
+    color: #0e0e0f;
+}
+
+@media (max-width: 550px) {
+    .container {
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        background: url(hh.jpg);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container .box {
+        height: 86vh;
+        width: 75%;
+        padding: 0 20px;
+        background-color: rgba(255, 255, 255, 0.1);
+        z-index: 10;
+        border: 2px solid rgb(255, 255, 255, 0.7);
+        border-radius: 20px;
+        display: flex;
+        backdrop-filter: blur(25px);
+        box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.15);
+    }
+
+    .content .section-1 h1 {
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: 700;
+        color: #000;
+    }
+
+    .content .social {
+        top: 36%;
+        left: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px; /* Add padding to the container for better spacing */
+    }
+    .container .box {
+        flex-direction: column; /* Stack sections vertically */
+        height: auto; /* Adjust height to accommodate content */
+        padding: 20px; /* Add padding inside the box */
+        width: 100%; /* Adjust width to fill the container */
+    }
+    .container nav {
+        height: auto; /* Adjust height to accommodate content */
+        width: 100%; /* Adjust width to fill the container */
+        position: static; /* Remove absolute positioning */
+        margin: 0; /* Reset margin */
+        padding: 10px 0; /* Add padding for better spacing */
+    }
+    .container .logo {
+        margin-left: 0; /* Center the logo */
+        text-align: center; /* Center the logo */
+        margin-bottom: 10px; /* Add spacing below the logo */
+    }
+    .content {
+        flex-direction: column; /* Stack sections vertically */
+        margin-top: 20px; /* Add spacing between sections */
+        padding: 0; /* Reset padding */
+    }
+    .content .section-1,
+    .content .section-2 {
+        width: 100%; /* Adjust width to fill the container */
+        text-align: center; /* Center content */
+    }
+    .content .section-1 h1 {
+        font-size: 30px; /* Decrease font size */
+    }
+    .content .section-1 h3 {
+        font-size: 35px; /* Decrease font size */
+    }
+    .content .section-2::after {
+        display: none; /* Hide the circular element */
+    }
+    .content .social {
+        position: static; /* Remove absolute positioning */
+        margin-top: 20px; /* Add spacing */
+        text-align: center; /* Center social links */
+    }
+    .content .social a {
+        display: inline-block; /* Display links inline */
+    }
+}
